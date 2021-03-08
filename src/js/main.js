@@ -1,4 +1,6 @@
 import img from "/images/door.svg";
+import "../style.css";
+
 let app = document.querySelector('#app');
 
 let monsters = [
