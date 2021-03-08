@@ -28,10 +28,19 @@ let shuffle = array => {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-    console.log(array);
-    return array;
 
+    return array;
 };
 
 // Shuffle the monsters array
 shuffle(monsters);
+
+app.innerHTML = '<div class="row">' + monsters.map((monster, index) => {
+    let html =
+        '<div class="grid">' + 
+            `<button data-monster-id="${index}">` +
+                `<img alt="${monster}" src="images/door.svg">` +
+            '</button>' +
+        '</div>';
+    console.log(html); 
+}).join('') + '</div>';
