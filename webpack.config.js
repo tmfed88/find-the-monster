@@ -33,6 +33,17 @@ mode: 'development',
         }
       },
       {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              encoding: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },

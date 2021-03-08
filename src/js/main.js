@@ -1,3 +1,4 @@
+import img from "/images/door.svg";
 let app = document.querySelector('#app');
 
 let monsters = [
@@ -39,8 +40,8 @@ app.innerHTML = '<div class="row">' + monsters.map((monster, index) => {
     let html =
         '<div class="grid">' + 
             `<button data-monster-id="${index}">` +
-                `<img alt="${monster}" src="images/door.svg">` +
+                `<img alt="${monster}" src="${img}">` +
             '</button>' +
         '</div>';
-    console.log(html); 
+    return html; 
 }).join('') + '</div>';
